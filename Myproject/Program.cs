@@ -1,19 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 class task4
 {
-    public static float Addtwonums(float a,float b)
+    public static float AddTwoNums(float a,float b)
     {
         return a+b;
     }
-    public static float Subtwonums(float a,float b)
+    public static float SubTwoNums(float a,float b)
     {   
         return a-b;       
     } 
-    public static float Multwonums(float a,float b)
+    public static float MulTwoNums(float a,float b)
     {   
         return a*b;       
     } 
-    public static float Divtwonums(float a,float b)
+    public static float DivTwoNums(float a,float b)
     {   
         return a/b;       
     } 
@@ -32,24 +32,26 @@ class task4
         float val2 =int.Parse(Console.ReadLine());
         switch (option)
         {
-            case 1: System.Console.WriteLine($"{val1} + {val2} = {Addtwonums(val1,val2)}");
+            case 1: System.Console.WriteLine($"{val1} + {val2} = {AddTwoNums(val1,val2)}");
             break;
-            case 2: System.Console.WriteLine($"{val1} - {val2} = {Subtwonums(val1,val2)}");
+            case 2: System.Console.WriteLine($"{val1} - {val2} = {SubTwoNums(val1,val2)}");
             break;
-            case 3: System.Console.WriteLine($"{val1} * {val2} = {Multwonums(val1,val2)}");
+            case 3: System.Console.WriteLine($"{val1} * {val2} = {MulTwoNums(val1,val2)}");
             break;
-            case 4: System.Console.WriteLine($"{val1} / {val2} = {Divtwonums(val1,val2)}");
+            case 4: System.Console.WriteLine($"{val1} / {val2} = {DivTwoNums(val1,val2)}");
+            break;
+            default: System.Console.WriteLine("Enter a valid Option");
             break;
         }
     }
-    static void main(string[] args) 
+    static void Main(string[] args) 
     {
     
         bool repeat = true;
         while (repeat)
         {
             ask();
-            System.Console.WriteLine("do you want to contine (Y/N)?");
+            System.Console.WriteLine("do you want to contine again (Y/N)?");
             string continueProg = Console.ReadLine();
             if (continueProg.ToUpper().Equals("N"))
             {
@@ -59,7 +61,6 @@ class task4
             {
                 repeat = true;
             }
-
         }
     }   
     
